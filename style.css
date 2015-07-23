@@ -87,20 +87,20 @@ a.all{
 	-webkit-columns: 3 200px;
 	-moz-columns: 3 200px;
 	columns: 3 200px;
-	padding: 20px 0;
+	padding: 20px;
 }
 
 .listings .venue{
 	margin: 0;
-	-webkit-column-break-inside: avoid; /* Chrome, Safari */
-	page-break-inside: avoid;           /* Theoretically FF 20+ */
+	-webkit-column-break-inside: avoid;  /*Chrome, Safari */
+	page-break-inside: avoid;           /* Theoretically FF 20+ 
 	break-inside: avoid-column;         /* IE 11 */
-	/*display:table;                    /* Actually FF 20+ */*/
+	/*display:table;                    /* Actually FF 20+ */
 }
 
 .footer{
 	background: #000;
-	padding: 50px 0;
+	padding: 50px 20px;
 	color: #fff;
 
 }
@@ -115,4 +115,24 @@ a.all{
 
 a.webLink{
 	color: #000;
+}
+
+/* Landscape phones and down */
+@media (max-width: 500px) {
+		.button{
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+
+		.listings{
+		margin-top: 20px;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns: 1;
+		padding: 20px;
+	}
+
+	.listings .venue{
+		display: block;
+	}
 }
